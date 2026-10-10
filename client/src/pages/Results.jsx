@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import { Loader2, TrendingUp, AlertTriangle, ChevronDown, ChevronUp, RotateCcw, History } from 'lucide-react';
 
 const hiringColors = {
@@ -70,7 +70,7 @@ export default function Results() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    axios
+    api
       .get(`/api/interview/${sessionId}`)
       .then(({ data }) => setSession(data))
       .catch(() => setError('Failed to load results.'))

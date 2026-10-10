@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import { Loader2, ExternalLink, BrainCircuit } from 'lucide-react';
 
 const scoreColor = (s) =>
@@ -26,7 +26,7 @@ export default function History() {
   const [loading, setLoading]   = useState(true);
 
   useEffect(() => {
-    axios
+    api
       .get('/api/sessions')
       .then(({ data }) => setSessions(data))
       .catch(console.error)

@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import {
   BrainCircuit,
   Loader2,
@@ -119,7 +119,7 @@ export default function Home() {
       const formData = new FormData();
       formData.append('resume', file);
 
-      const { data } = await axios.post('/api/interview/parse-resume', formData, {
+      const { data } = await api.post('/api/interview/parse-resume', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
@@ -157,7 +157,7 @@ export default function Home() {
         resumeText: resumeText.trim(),
       };
 
-      const { data } = await axios.post('/api/interview/start', payload);
+      const { data } = await api.post('/api/interview/start', payload);
 
       navigate(`/interview/${data.sessionId}`, {
         state: {

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import { BrainCircuit, Send, Loader2, ChevronRight, User, Mic } from 'lucide-react';
 import ScoreCard from '../components/ScoreCard';
 
@@ -61,7 +61,7 @@ export default function Interview() {
     setPhase('evaluating');
 
     try {
-      const { data } = await axios.post('/api/interview/answer', {
+      const { data } = await api.post('/api/interview/answer', {
         sessionId,
         answer: userAnswer,
       });
