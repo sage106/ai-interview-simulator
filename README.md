@@ -1,8 +1,11 @@
 # 🤖 AI Interview Simulator
 
-> Practice job interviews with an AI powered by **Llama 3** (open-source) via Groq. Get real questions, instant feedback, and a full performance report — free.
+> Practice job interviews with an AI powered by open-source LLMs via Groq. Get real questions, instant feedback, and a full performance report — free.
 
 Built for **Hacktoberfest 2026 Open-Source AI Challenge**.
+
+🌐 **Live Demo (Frontend)**: [https://ai-interview-simulator-nu-weld.vercel.app/](https://ai-interview-simulator-nu-weld.vercel.app/)  
+⚡ **Live API (Backend)**: [https://ai-interview-simulator-9v89.onrender.com/](https://ai-interview-simulator-9v89.onrender.com/)
 
 ---
 
